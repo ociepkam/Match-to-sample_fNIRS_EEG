@@ -52,6 +52,9 @@ figure_central_pos: [0, 0]
 figure_central_size: 60
 
 figure_cluster_radius: 150
+figure_cluster_size: 40
+cluster_angle: 90
+maximum_load: 8
 
 stimulus_color: black
 stimulus_size: 60

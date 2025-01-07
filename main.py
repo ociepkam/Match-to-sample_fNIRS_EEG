@@ -36,10 +36,10 @@ def main():
     # --------------------------------------- procedure ---------------------------------------
     # training
     if config["training"]:
-        pass
+        trials = prepare_trials(trials_description=config["training_trials"], win=win, config=config)
 
     # experiment
-    pass
+    trials = prepare_trials(trials_description=config["experiment_trials"], win=win, config=config)
 
     # end screen
     show_info(win=win, file_name=join("messages", "end.txt"), text_size=config["text_size"], text_color=config["text_color"], screen_res=screen_res)
