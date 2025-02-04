@@ -26,11 +26,11 @@ def save_results():
         dict_writer.writerows(RESULTS)
 
 
-def draw_stimulus(stimulus, clock, win, stimulus_time):
+def draw_stimulus(stimulus, clock, win, stimulus_time, idx):
     stimulus.setAutoDraw(True)
     win.callOnFlip(clock.reset)
     if SEND_TRIGGERS:
-        win.callOnFlip(LSL_OUTLET.push_sample, x=[1])
+        win.callOnFlip(LSL_OUTLET.push_sample, x=[int("1" + str(idx))])
     win.flip()
     while clock.getTime() < stimulus_time:
         check_exit()
@@ -47,7 +47,7 @@ def run_block(trials, win, config, clock, fixation, block_type):
         else:
             fixation_time = random.uniform(config[f"{block_type}_fixation_time"][0],
                                            config[f"{block_type}_fixation_time"][1])
-        draw_stimulus(stimulus=fixation, clock=clock, win=win, stimulus_time=fixation_time)
+        draw_stimulus(stimulus=fixation, clock=clock, win=win, stimulus_time=fixation_time, idx=idx)
 
         # stimulus
         win.callOnFlip(event.clearEvents)
@@ -55,14 +55,14 @@ def run_block(trials, win, config, clock, fixation, block_type):
         for figure in trial["figures"]:
             figure.setAutoDraw(True)
         if SEND_TRIGGERS:
-            win.callOnFlip(LSL_OUTLET.push_sample, x=[2])
+            win.callOnFlip(LSL_OUTLET.push_sample, x=[int("2" + str(idx))])
         win.flip()
         while clock.getTime() < config[f"{block_type}_time"]:
             key = event.getKeys(keyList=config["reaction_keys"].values())
             if key:
                 reaction_time = clock.getTime()
                 if SEND_TRIGGERS:
-                    LSL_OUTLET.push_sample(x=[3])
+                    LSL_OUTLET.push_sample(x=[int("3" + str(idx))])
                 key = key[0]
                 break
             check_exit()
