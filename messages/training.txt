@@ -1,1 +1,12 @@
-TR
+Witaj! Za chwilę rozpocznie się krótkie zadanie, które pomoże Ci zapoznać się z procedurą eksperymentu. Twoim zadaniem będzie obserwowanie kształtu wyświetlanego na środku ekranu oraz grupy innych kształtów, które pojawią się obok. Będziesz musiał/a sprawdzić, czy któryś z kształtów w grupie pasuje do kształtu centralnego.
+
+Co należy zrobić:
+
+    Kiedy kształt centralny pasuje do jednego z kształtów w grupie, naciśnij lewą strzałkę.
+    Kiedy żaden kształt w grupie nie pasuje do kształtu centralnego, naciśnij prawą strzałkę.
+
+Pamiętaj, że masz tylko 5 sekund, aby zareagować, więc staraj się być szybki/a, ale też dokładny/a. Po każdej próbie na ekranie pojawi się krótka przerwa z centralnie wyświetlaną kropką.
+
+Zadanie będzie wyglądało dokładnie tak samo, jak w tej sesji treningowej. Spróbuj skupić się na ekranie i zwróć uwagę, czy kształty pasują do siebie.
+
+Kiedy będziesz gotowy/a, wciśnij spację, aby rozpocząć sesję treningową.
